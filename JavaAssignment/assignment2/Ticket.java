@@ -1,4 +1,4 @@
-package TicketSystem;
+package assignment2;
 
 public class Ticket {
 
