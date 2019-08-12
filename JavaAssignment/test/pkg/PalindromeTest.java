@@ -11,34 +11,38 @@ class PalindromeTest {
 	
 	static PalindromeChecker obj;
 
-	@BeforeEach
+/*	@BeforeEach
 	public void setup() {
-		obj = new PalindromeChecker();
 		
-	}
+		
+	}*/
 	
 	@Test
 	void testWithaPalindrome1() {
-		boolean result = obj.checkPalindrome("radar");
+		obj = new PalindromeChecker("radar");
+		boolean result = obj.isPalindrome();
 		assertEquals(true, result);
 	}
 	
 	@Test
 	void testWithaPalindrome2() {
-		boolean result = obj.checkPalindrome("May Yam");
+		obj = new PalindromeChecker("May Yam");
+		boolean result = obj.isPalindrome();
 		assertEquals(true, result);
 	}
 	
 	@Test
 	void testWithNonPalindrome1() {
-		boolean result = obj.checkPalindrome("blahblah");
+		obj = new PalindromeChecker("blahblah");
+		boolean result = obj.isPalindrome();
 		assertEquals(false, result);
 	}
 	
 	
 	@Test
 	void testWithNonPalindrome2() {
-		boolean result = obj.checkPalindrome("Rotater");
+		obj = new PalindromeChecker("Rotater");
+		boolean result = obj.isPalindrome();
 		assertEquals(false, result);
 	}
 

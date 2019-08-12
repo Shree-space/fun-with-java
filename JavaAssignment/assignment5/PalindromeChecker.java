@@ -2,23 +2,23 @@ package assignment5;
 
 public class PalindromeChecker {
 
-	private String inputStr;
-	private boolean result;
+	private boolean Palindrome;
+	private String reversedStr;
+	
+	public PalindromeChecker(String inputStr) {
+		checkPalindrome(inputStr);
+
+	}
 	
 
-
-	public void setInputStr(String inputStr) {
-		this.inputStr = inputStr;
+	public boolean isPalindrome() {
+		return Palindrome;
 	}
 
-	public boolean isResult() {
-		return result;
-	}
-
-	public boolean checkPalindrome(String inputStr) {
-		String reversedStr = reverseString(inputStr);
-		boolean result = compareString(inputStr,reversedStr);
-		return result;
+	private void checkPalindrome(String inputStr) {
+		this.reversedStr = reverseString(inputStr);
+		this.Palindrome = inputStr.equalsIgnoreCase(this.reversedStr);
+		
 	}
     
 	private String reverseString(String inputStr) {
@@ -27,9 +27,6 @@ public class PalindromeChecker {
 		return reversedStr;
 	}
 	
-	private boolean compareString(String inputStr, String reversedStr) {
-		boolean result = inputStr.equalsIgnoreCase(reversedStr);
-		return result;
-	}
+
 	
 }
