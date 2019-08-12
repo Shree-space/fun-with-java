@@ -2,7 +2,7 @@ package assignment5;
 
 public class PalindromeChecker {
 
-	private boolean Palindrome;
+	private boolean palindrome;
 	private String reversedStr;
 	
 	public PalindromeChecker(String inputStr) {
@@ -12,12 +12,12 @@ public class PalindromeChecker {
 	
 
 	public boolean isPalindrome() {
-		return Palindrome;
+		return palindrome;
 	}
 
 	private void checkPalindrome(String inputStr) {
 		this.reversedStr = reverseString(inputStr);
-		this.Palindrome = inputStr.equalsIgnoreCase(this.reversedStr);
+		this.palindrome = inputStr.equalsIgnoreCase(this.reversedStr);
 		
 	}
     
